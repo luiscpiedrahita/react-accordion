@@ -1,11 +1,9 @@
-import { useState } from "react";
-
-export function AccordionItem({ title, num, text }) {
-  const [isOpen, setIsopen] = useState(false);
+export function AccordionItem({ title, num, text, curOpen, onOpen }) {
+  const isOpen = num === curOpen;
 
   function handleToggle() {
-    setIsopen((isOpen) => !isOpen);
-    console.log(isOpen);
+    console.log(curOpen !== null);
+    onOpen((curOpen) => (isOpen ? null : num));
   }
 
   return (
