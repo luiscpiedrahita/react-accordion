@@ -6,7 +6,6 @@ export function Accordion({ data }) {
       {data.map((el, i) => (
         <AccordionItem key={i} title={el.title} num={i} text={el.text} />
       ))}
-      ;
     </div>
   );
 }
